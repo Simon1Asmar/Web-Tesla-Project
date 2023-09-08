@@ -1,0 +1,28 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* SVG */
+/* In order to get these filter values for colors from hexcodes I'm using this website https://isotropic.co/tool/hex-color-to-css-filter/ */
+.filter-black {
+  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(268deg) brightness(106%) contrast(107%);
+}
+
+.filter-white {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(329deg) brightness(104%) contrast(102%);
+}
+
+#svg-header-logo {
+  height: 10px;
+}
+
+
+div{
+  width: 100%;
+  background: green;
+  height:fit-content;
+  
+}
