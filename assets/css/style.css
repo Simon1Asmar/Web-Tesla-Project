@@ -1,3 +1,8 @@
+@font-face {
+  font-family: GothamFont1;
+  src: url("./../fonts/GothamSSm-Book_Web.woff2");
+}
+
 /* Reset */
 * {
   margin: 0;
@@ -5,8 +10,48 @@
   box-sizing: border-box;
 }
 
+body {
+  /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: GothamFont1, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+/* Utilities */
+.page-section {
+  width: 100%;
+  height: 720px;
+  /* background: black; */
+  overflow: hidden;
+}
+
+.container {
+  margin: auto;
+  min-width: 400px;
+  max-width: 1220px;
+  overflow: auto;
+  padding: 10px;
+}
+
+.fitted-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
 /* SVG */
 /* In order to get these filter values for colors from hexcodes I'm using this website https://isotropic.co/tool/hex-color-to-css-filter/ */
+/* I used some icons from Tabler icons (an opensource and free website) */
 .filter-black {
   filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(268deg) brightness(106%) contrast(107%);
 }
@@ -15,14 +60,154 @@
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(329deg) brightness(104%) contrast(102%);
 }
 
-#svg-header-logo {
-  height: 10px;
+/* Header & Nav Bar */
+#main-header {
+  position: absolute;
+  width: 100%;
+}
+
+#navbar {
+  /* padding: 20px 0px; */
+  /* padding: 20px 35px; */
+  /* background: #333; */
+  color: white;
+  overflow: auto;
+
+  position: relative;
+
+  z-index: 1;
+}
+
+#navbar .container {
+  padding: 22px 20px;
+  
+}
+
+#navbar #svg-header-logo {
+  width: 122px;
+  float: left;
+  position: absolute;
+}
+
+#navbar #navbar-mid-section {
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  overflow: auto;
+
+  padding: 20px;
+
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#navbar #navbar-right-section {
+  width: fit-content;
+  /* height: 100%; */
+  /* padding: 10px; */
+  /* margin: auto; */
+  overflow: visible;
+
+  margin-top: -10px;
+
+  float: right;
+
+  /* background:coral; */
+
+
+}
+
+#navbar ul li {
+  list-style: none;
+  float: left;
+}
+
+#navbar #navbar-right-section ul{
+  overflow: visible;
+}
+
+#navbar #navbar-right-section ul li{
+  overflow: visible;
+  margin: 2px;
 }
 
 
-div{
-  width: 100%;
-  background: green;
-  height:fit-content;
+/* #navbar #navbar-mid-section ul li a:hover */
+#navbar ul li a:hover
+/* #navbar #navbar-right-section ul li a img:hover */
+ {
+  background-color: rgba(46, 46, 46, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+#navbar #navbar-mid-section ul li {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0px;
+  /* padding: 0px 5px; */
+}
+
+#navbar #navbar-mid-section ul li a {
+  padding: 10px 15px;
+  /* padding-left: 30px; */
+}
+
+#navbar #navbar-right-section ul li a {
+  border-radius: 5px;
+  padding: 12px 5px 0px 5px;
+}
+#navbar #navbar-right-section ul li img:hover{
+  cursor: pointer;
+}
+
+/* Fixed Chat Button */
+#fixed-chat-button {
+  position:fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 15px;
+  z-index: 1;
+
+  background-color: #36363c;
+  border-radius: 5px;
+  border: solid #36363c;
   
+}
+#fixed-chat-button:hover {
+  cursor: pointer;
+}
+
+/* First Page */
+#main-info{
+  width: 100%;
+  height: 100px;
+  margin: auto;
+  
+  position: relative;
+  top: 90px;
+
+  text-align: center;
+  font-weight: bold;
+}
+
+#main-info h1{
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+#main-info h2{
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#main-info p{
+  font-size: 12px;
+}
+
+#section1 {
+  position: relative;
+  /* background-color: aqua; */
 }
